@@ -86,6 +86,7 @@ a {
 	}
 	.logo{
 		padding: 10px 0 0 10px;
+		max-width: 170px;
 	}
   @include MQ(L){
 		box-shadow:none;
@@ -99,6 +100,7 @@ a {
 		padding: 21px 0;
 		.logo{
 			float: left;
+			max-width: none;
 			padding-top: 0;
 		}
 		.container{
@@ -186,10 +188,10 @@ a {
 	width: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
-	min-height: 400px;
+
 	.container{
 		height: 100%;
-		min-height: 400px;
+	  min-height: 370px;
 	}
   .content-blk{
 		position: absolute;
@@ -213,8 +215,18 @@ a {
 	h1{
 		text-transform: uppercase;
 		font-weight: 700;
-		@include fontSize(50px);
+		@include fontSize(42px);
 		color: $black;
+	}
+	@include MQ(M){
+		min-height: 400px;
+		h1{
+			@include fontSize(50px);
+		}
+		.container{
+
+			min-height: 400px;
+		}
 	}
 	@include MQ(L){
 		height: 100vh;
@@ -249,25 +261,46 @@ a {
 		}
 	}
 	&.home-bg{
-		background-image: url("../images/home-banner.jpg");
+		background-image: url("../images/home-banner-mob.jpg");
+		@include MQ(M){
+			background-image: url("../images/home-banner.jpg");
+		}
 	}
 	&.serv-bg1{
 		background-image: url("../images/serv-banner1.jpg");
+		@include MQ(M){
+			background-image: url("../images/home-banner.jpg");
+		}
 	}
 	&.serv-bg2{
-		background-image: url("../images/serv-banner2.jpg");
+		background-image: url("../images/serv-banner2-mob.jpg");
+		@include MQ(M){
+			background-image: url("../images/serv-banner2.jpg");
+		}
 	}
 	&.serv-bg3{
-		background-image: url("../images/serv-banner3.jpg");
+		background-image: url("../images/serv-banner3-mob.jpg");
+		@include MQ(M){
+			background-image: url("../images/serv-banner3.jpg");
+		}
 	}
 	&.serv-bg4{
-		background-image: url("../images/serv-banner5.jpg");
+		background-image: url("../images/serv-banner5-mob.jpg");
+		@include MQ(M){
+			background-image: url("../images/serv-banner5.jpg");
+		}
 	}
 	&.serv-bg5{
-		background-image: url("../images/serv-banner4.jpg");
+		background-image: url("../images/serv-banner4-mob.jpg");
+		@include MQ(M){
+			background-image: url("../images/serv-banner4.jpg");
+		}
 	}
 	&.serv-bg6{
-		background-image: url("../images/serv-banner6.jpg");
+		background-image: url("../images/serv-banner6-mob.jpg");
+		@include MQ(M){
+			background-image: url("../images/serv-banner6.jpg");
+		}
 	}
 
 
@@ -287,10 +320,8 @@ a {
 .content-sec{
 	background-repeat: no-repeat;
 	height: 100%;
-	background-size:cover;
-	@include MQ(L){
-		background-size: auto;
-	}
+	background-size:contain;
+
 	&.home-bg{
 		background-image: url("../images/home-bg.png");
 	}
@@ -401,7 +432,7 @@ a {
 	}
 }
 .footer{
-	height: 65px;
+	min-height: 65px;
 	text-align: center;
 	font-size: 14px;
 	font-weight: 300;
@@ -588,4 +619,25 @@ a {
 }
 .img-blk{
 	padding-bottom: 70px;
+}
+.cpy-rgt{
+	margin-top: 18px;
+	@include MQ(M){
+		float: left;
+		margin-top: 0;
+	}
+}
+.social{
+
+
+	>li{
+		display: inline-block;
+		margin-left: 10px;
+		>a{
+			padding: 0 5px;
+		}
+	}
+	@include MQ(M){
+		float: right;
+	}
 }
