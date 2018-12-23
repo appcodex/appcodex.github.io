@@ -21,12 +21,24 @@
 				 <span></span>
 				 <span></span>
 			</div>
-			<nav class="nav">
+			<nav class="nav" id="mainNav">
 				<ul class="nav-list">
-					<li><a href="#">Home</a> </li>
-					<li><a href="#">Nav One</a> </li>
-					<li><a href="#">Nav Two</a> </li>
-					<li><a href="#">Nav Three</a> </li>
+					<li><a href="index.html">Home</a> </li>
+					<li>
+						<div class="serv-drop">
+							<span class="link">Service Offering</span>
+							<ul class="drop-dwn">
+								<li> <a href="service-1.html">Applied Intelligence</a> </li>
+								<li> <a href="service-2.html">Modernizing it Infrastructure</a> </li>
+								<li> <a href="service-3.html">Design & Experience</a> </li>
+								<li> <a href="service-4.html">Strategy & Transformation</a> </li>
+								<li> <a href="service-5.html">Cybersecurity & Governance</a> </li>
+								<li> <a href="service-6.html">Software Development & Delivery</a> </li>
+							</ul>
+						</div>
+					 </li>
+					<li><a href="#about" class="scroll-trigger">About Us</a> </li>
+					<li><a href="#contact" class="scroll-trigger">Contactus</a> </li>
 				</ul>
 			</nav>
 		</div>
@@ -43,10 +55,10 @@
  	 </div>
 	 <div class="content-sec cont-pad home-bg">
 	 	<div class="container">
-			<h2 class="sub-title">Lorem ipsum</h2>
+			<h2 class="sub-title">OUR MISSION</h2>
        <article class="article">
  			 	<p>We thrive in the theory and practice of making organizations globally competitive and now, we are bringing best of class solutions that works across the world to you</p>
-				<p>We thrive in the theory and practice of making organizations globally competitive and now, we are bringing best of class solutions that works across the world to you</p>
+
 			 </article>
 			 <div class="grid-blk grid-wrap">
 			 		<div class="col-6 gird-img">
@@ -68,36 +80,39 @@
 			 			<a href="service-6.html"><img src="images/grid-img-5.jpg" alt=""/></a>
 			 		</div>
 			 </div>
-			 <article class="article">
- 			 	<p>KALOGY is a subsidiary of BEZEL ARABIA, with a 26 year history of serving world's largest companies and institutions—helping them to accelerate value creation, shape winning strategies and drive execution. We also partner with government leaders to help drive growth, create skills and jobs, and strengthen services</p>
-				<p>We aim to be the best at all that we do—to help clients realize their ambitions, to make a positive difference in society, and to maximize the success of our people. This drive fuels the commitment and humanity that run deep through our every action.</p>
-				<div class="p-sec">
-					<p>That’s what makes us truly different at Kalogy. Not how big we are, where we are, nor what services we offer. What really defines us is our drive to make an impact that matters for our clients.</p>
-				</div>
-			 </article>
-			 <div class="contact-blk">
-				 <h2 class="sub-title">Contact info</h2>
-			 		<article class="article">
-						<p>Reach us at hello@kalogy.com or through one of our global offices</p>
-					</article>
-					<div class="grid-blk">
-						<div class="col-3">
-							<p>+1 262 456 5833</p>
-							<p>Milwuakee,</p>
-							<p>United States.</p>
-						</div>
-						<div class="col-3">
-							<p>+1 262 456 5833</p>
-							<p>Jeddah,</p>
-							<p>Saudi Arabia.</p>
-						</div>
-						<div class="col-3">
-							<p>+91 9543270365</p>
-							<p>Cochin, Kerala</p>
-							<p>India.</p>
-						</div>
-					</div>
-			 </div>
+			 <section id="about">
+				 <article class="article p-graph">
+  				 <h2 class="sub-title">About Us</h2>
+   			 	<p>KALOGY is a subsidiary of BEZEL ARABIA, with a 26 year history of serving world's largest companies and institutions—helping them to accelerate value creation, shape winning strategies and drive execution. We also partner with government leaders to help drive growth, create skills and jobs, and strengthen services</p>
+  				<p>We aim to be the best at all that we do—to help clients realize their ambitions, to make a positive difference in society, and to maximize the success of our people. This drive fuels the commitment and humanity that run deep through our every action.</p>
+  				<p>That’s what makes us truly different at Kalogy. Not how big we are, where we are, nor what services we offer. What really defines us is our drive to make an impact that matters for our clients.</p>
+  			 </article>
+			 </section>
+			 <section id="contact">
+				 <div class="contact-blk">
+  				 <h2 class="sub-title">Contact info</h2>
+  			 		<article class="article">
+  						<p>Reach us at hello@kalogy.com or through one of our global offices</p>
+  					</article>
+  					<div class="grid-blk">
+  						<div class="col-3">
+  							<p>+1 262 456 5833</p>
+  							<p>Milwuakee,</p>
+  							<p>United States.</p>
+  						</div>
+  						<div class="col-3">
+  							<p>+1 262 456 5833</p>
+  							<p>Jeddah,</p>
+  							<p>Saudi Arabia.</p>
+  						</div>
+  						<div class="col-3">
+  							<p>+91 9543270365</p>
+  							<p>Cochin, Kerala</p>
+  							<p>India.</p>
+  						</div>
+  					</div>
+  			 </div>
+			 </section>
 		</div>
 	 </div>
  </main>
@@ -114,6 +129,7 @@
 	</div>
 </footer>
 <script src="js/jquery-3.1.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html>

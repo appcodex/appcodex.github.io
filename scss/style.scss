@@ -120,6 +120,7 @@ a {
 	}
 	.nav-list{
 		max-height: 0;
+		margin-top: 10px;
 		overflow: hidden;
 		background-color: #ffffff;
 		padding: 0 10px;
@@ -130,10 +131,11 @@ a {
 		>li{
 			margin-bottom: 10px;
 
-			>a{
+			>a,.link{
+				font-weight: 500;
 				color: $black;
 				@include fontSize(20px);
-				padding: 15px 0;
+				padding: 10px 0;
 				display: block;
 				-webkit-transition: all .3s ease-in-out;
 				-moz-transition: all .3s ease-in-out;
@@ -165,12 +167,15 @@ a {
 		}
 		 @include MQ(L){
 			 max-height: none;
+			 overflow:visible;
+			 margin-top: 0;
 			 background-color:transparent;
 			 >li{
 	 			display: inline-block;
 				margin-right: 5%;
-				a{
+				>a,.link{
 					padding: 5px 0;
+					cursor: pointer;
 					@include fontSize(16px);
 				}
 
@@ -181,6 +186,70 @@ a {
 	&.open{
 		.nav-list{
 			max-height: calc(100vh - 55px);
+			padding-bottom: 20px;
+
+		}
+	}
+	.serv-drop{
+		position: relative;
+			@include MQ(L){
+				padding-bottom: 29px;
+				&:hover{
+					.drop-dwn{
+					opacity: 1;
+					visibility: visible;
+					}
+					.link{
+						color: $green;
+						&:after{
+							width: 20px;
+						}
+					}
+				}
+			}
+	}
+	.drop-dwn{
+		text-align: left;
+		margin-left: 25px;
+		>li{
+			margin-bottom: 25px;
+			&:last-child{
+				margin-bottom: 15px;
+			}
+			>a{
+				padding: 8px 0;
+				@include fontSize(18px);
+				-webkit-transition: all .2s ease-in-out;
+				-moz-transition: all .2s ease-in-out;
+				-ms-transition: all .2s ease-in-out;
+				-o-transition: all .2s ease-in-out;
+				transition: all .2s ease-in-out;
+				color: $black;
+				&:hover{
+					color: $green;
+				}
+			}
+		}
+		@include MQ(L){
+			margin-left: 0;
+			background-color:rgba(255,255,255,.85);
+			position: absolute;
+			top: 48px;
+			left: 0;
+			min-width: 300px;
+			padding: 25px;
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-ms-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+			opacity: 0;
+			visibility: hidden;
+			>li{
+				>a{
+					@include fontSize(15px);
+				}
+			}
 		}
 	}
 }
@@ -267,9 +336,9 @@ a {
 		}
 	}
 	&.serv-bg1{
-		background-image: url("../images/serv-banner1.jpg");
+		background-image: url("../images/serv-banner1-mob.jpg");
 		@include MQ(M){
-			background-image: url("../images/home-banner.jpg");
+			background-image: url("../images/serv-banner1.jpg");
 		}
 	}
 	&.serv-bg2{
@@ -347,9 +416,7 @@ a {
 		strong{
 			font-weight: 600;
 		}
-		>span{
-			display: block;
-		}
+
 
 	}
 	@include MQ(L){
@@ -357,11 +424,11 @@ a {
 		text-align: center;
 		&.p-graph{
 			p{
-				padding-bottom: 40px;
+				padding-bottom: 30px;
 			}
 		}
 		p{
-			margin-bottom: 25px;
+			margin-bottom: 20px;
 		}
 
 
@@ -640,4 +707,7 @@ a {
 	@include MQ(M){
 		float: right;
 	}
+}
+.m-0{
+	margin: 0!important;
 }
